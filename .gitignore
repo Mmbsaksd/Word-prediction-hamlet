@@ -1,12 +1,20 @@
- Ignore virtual environment
+# Ignore Python virtual environment
 env/
 venv/
-*.pyc
+.venv/
+ 
+# Ignore Python cache
 __pycache__/
-
-# Ignore notebooks checkpoints
-.ipynb_checkpoints/
-
-# Ignore OS files
+*.pyc
+*.pyo
+*.pyd
+ 
+# Ignore system files
 .DS_Store
 Thumbs.db
+ 
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+ 
+# Ignore compiled packages
+*.egg-info/
