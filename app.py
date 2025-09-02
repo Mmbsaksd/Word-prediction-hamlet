@@ -1,11 +1,14 @@
 import streamlit as st
 import numpy as np
 import pickle
-from keras.models import load_model
+import keras
+from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 #Load the LSTM Model
-model = load_model('next_word_lstm.h5')
+from tensorflow import keras
+model = keras.models.load_model("next_word_lstm.keras", compile=False)
+
 
 #Load the tocknizer
 with open('tokenizer.pickle','rb') as handle:
